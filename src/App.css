@@ -1,4 +1,4 @@
-/* body {
+/* /* /* body {
   margin: 0;
   background: #333333;
 }
@@ -56,4 +56,64 @@
 
 
 
+.App {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  gap: 20px;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
 
+.App textarea {
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  color: #4486ff;
+  background: #0A0F36;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+  font-family: monospace;
+  transition: background 0.25s, color 0.25s;
+  box-shadow: 0px 0px 15px 0px rgb(0 0 0);
+}
+
+.App textarea:hover,
+.App textarea:focus {
+  background: #090C2B;
+}
+
+.App button {
+  padding: 8px 14px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #4486ff;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oxygen';
+  transition: all 0.3s ease-in-out;
+}
+
+.App button:hover {
+  background-color: #4486BC;
+}
+.collapse-button {
+  display: block;
+  width: 100%;
+}
+
+.collapse-content.collapsed {
+  display: none;
+}
+
+.collapsed-content.expanded {
+  display: block;
+}
