@@ -44,7 +44,7 @@ function TreeNode(props) {
               onClick={() => setDisplay(!display)}
             >
               {nodeKey}
-              {" > "} {'{'}
+              {" > "}{'{'}
             </span>
           </p>
           {display &&
@@ -71,7 +71,7 @@ function TreeNode(props) {
               onClick={() => setDisplay(!display)}
             >
               {nodeKey}
-              {'[' + root.length + ']'} {'['}
+              {'[' + root.length + ']'}: {'['}
             </span>
           </p>
           {display &&

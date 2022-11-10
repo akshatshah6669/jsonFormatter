@@ -21,6 +21,7 @@ import TreeNode from "./TreeNode";
             <span
               onClick={() => setDisplay(!display)}
             >
+              <p>OUTPUT:-(Click on caret)</p>  
               {" > "} {display && "{"}
             </span>
           </p>
