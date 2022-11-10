@@ -21,7 +21,7 @@ import TreeNode from "./TreeNode";
             <span
               onClick={() => setDisplay(!display)}
             >
-              {"Data  > "} {display && "{"}
+              {" > "} {display && "{"}
             </span>
           </p>
         {
