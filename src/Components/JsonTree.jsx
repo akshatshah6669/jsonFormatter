@@ -1,6 +1,9 @@
+import { useState } from "react";
 import TreeNode from "./TreeNode";
 
  function JSONTree(props) {
+    const [display, setDisplay] = useState(false);
+
     console.log(props);
     function getNode(obj) {
       const arr = [];
@@ -14,8 +17,17 @@ import TreeNode from "./TreeNode";
 
     return (
       <div className="tree">
-        <p>{"object {" + ">" + "}"}</p>
-        {root.map((data) => (
+        <p>
+            <span
+              onClick={() => setDisplay(!display)}
+            >
+              {"Data  > "} {display && "{"}
+            </span>
+          </p>
+        {
+        display
+        &&
+        root.map((data) => (
           <TreeNode
             key={data.nodeKey}
             propKey={data.nodeKey}
