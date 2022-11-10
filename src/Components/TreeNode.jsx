@@ -3,7 +3,7 @@ import { useState } from "react"
 function TreeNode(props) {
     const [display, setDisplay] = useState(false)
   
-    const { node, nodeKey, level, handleChange, propKey } = props
+    const { node, nodeKey, level} = props
   
     if (typeof node === 'string' || typeof node === 'number' || node === null) {
       return (
@@ -50,13 +50,11 @@ function TreeNode(props) {
           {display &&
             root.map((data) => (
               <TreeNode
-                key={propKey + '[' + data.nodeKey + ']'}
-                propKey={propKey + '[' + data.nodeKey + ']'}
                 nodeKey={data.nodeKey}
                 node={data.value}
                 getNode={props.getNode}
                 level={level + 1}
-                handleChange={handleChange}
+                
               />
             ))}{' '}
           <p style={{ marginLeft: level * 10 + 'px' }}> {'}'} </p>
@@ -77,13 +75,11 @@ function TreeNode(props) {
           {display &&
             root.map((data) => (
               <TreeNode
-                key={propKey + '[' + data.nodeKey + ']'}
-                propKey={propKey + '[' + data.nodeKey + ']'}
                 nodeKey={data.nodeKey}
                 node={data.value}
                 getNode={props.getNode}
                 level={level + 1}
-                handleChange={handleChange}
+                
               />
             ))}
           <p style={{ marginLeft: level * 10 + 'px' }}>{']'}</p>

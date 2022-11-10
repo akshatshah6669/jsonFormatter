@@ -31,12 +31,12 @@ import TreeNode from "./TreeNode";
         root.map((data) => (
           <TreeNode
             key={data.nodeKey}
-            propKey={data.nodeKey}
+           
             nodeKey={data.nodeKey}
             node={data.value}
             getNode={getNode}
             level={1}
-            handleChange={props.handleChange}
+        
           />
         ))}
       </div>

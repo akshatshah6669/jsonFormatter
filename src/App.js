@@ -32,7 +32,7 @@ function App() {
       const inputParsed = JSON.parse(input);
       const beautifiedInput = JSON.stringify(inputParsed, null, 4);
       setJsonObj(inputParsed);
-      
+      return beautifiedInput;
     }
   };
 
